@@ -1,4 +1,5 @@
 JAVA
+document.body.innerHTML = "테스트 성공";
 alert("JS 시작");
 const firebaseConfig = {
   apiKey: "AIzaSyBcjSuTkJ9Y0CJ0ENS7gaTWmHJTs6BhVtw",
