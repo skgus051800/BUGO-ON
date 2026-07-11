@@ -1,0 +1,318 @@
+CSS
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+  color: #222;
+}
+
+.app{
+  max-width:900px;
+  padding:20px;
+}
+
+section{
+  transition:0.2s;
+}
+
+section:hover{
+  transform:translateY(-2px);
+}
+
+header {
+  background: white;
+  padding: 18px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+button {
+  border: none;
+  background: #3563e9;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.hidden {
+  display: none;
+}
+
+.calendar-box,
+.admin-panel,
+.list-box {
+  background: white;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  margin-bottom: 18px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weekdays,
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.weekdays div {
+  text-align: center;
+  font-weight: bold;
+  padding: 8px;
+  color: #666;
+}
+
+.day {
+  min-height: 85px;
+  background: #f8f9fd;
+  border-radius: 10px;
+  padding: 6px;
+  border: 1px solid #e1e4ef;
+}
+
+.day-number {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.empty {
+  background: transparent;
+  border: none;
+}
+
+.event {
+  color: #444;
+  font-size: 7px;
+  padding: 3px 5px;
+  border-radius: 8px;
+  margin-top: 3px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.admin-panel input,
+.admin-panel textarea {
+  width: 100%;
+  padding: 11px;
+  margin-bottom: 10px;
+  border: 1px solid #d5d8e3;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.admin-panel textarea {
+  height: 90px;
+}
+
+.schedule-item {
+  border: 1px solid #e1e4ef;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: #fafbff;
+}
+
+.schedule-item h3 {
+  margin: 0 0 6px;
+}
+
+.delete-btn {
+  background: #e94b4b;
+  margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .day {
+    min-height: 70px;
+    font-size: 12px;
+  }
+
+  .event {
+  color: #444;
+  font-size: 9px;
+  padding: 3px 5px;
+  border-radius: 8px;
+  margin-top: 3px;
+  line-height: 1.2;
+  font-weight: 600;
+  word-break: keep-all;
+
+  display: flex;
+  flex-direction: column;
+}
+}
+  
+.popup{
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:999;
+}
+
+.popup-box{
+    width:320px;
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+
+.popup-box h2{
+    margin-top:0;
+}
+
+.popup.hidden{
+    display:none;
+}
+
+#closePopup{
+    width:100%;
+    margin-top:20px;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:#4a6cf7;
+    color:white;
+    cursor:pointer;
+}
+
+.timetable-box{
+  background:white;
+  padding:18px;
+  border-radius:16px;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+  margin-bottom:18px;
+}
+
+#timetable{
+  width:100%;
+  border-collapse:collapse;
+  text-align:center;
+}
+
+#timetable th,
+#timetable td{
+  border:1px solid #e5e5e5;
+  padding:10px;
+}
+
+#timetable th{
+  background:#f2f5ff;
+}
+
+.today-column{
+  background:#dce9ff !important;
+}
+
+#editTimetableBtn{
+  margin-top:15px;
+}
+
+.meal-box{
+  background:white;
+  padding:18px;
+  border-radius:16px;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+  margin-bottom:18px;
+}
+
+#meal{
+  line-height:1.8;
+  font-size:15px;
+}
+
+.dday-box{
+  background:white;
+  padding:18px;
+  border-radius:16px;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+  margin-bottom:18px;
+}
+
+.dday-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px;
+  border-bottom:1px solid #eee;
+}
+
+.dday-item:last-child{
+  border-bottom:none;
+}
+
+.dday-date{
+  font-weight:bold;
+  color:#3563e9;
+}
+
+header{
+  background:linear-gradient(135deg,#3563e9,#7aa7ff);
+  color:white;
+}
+
+header button{
+  background:white;
+  color:#3563e9;
+}
+
+.dday-item span{
+  color:#222;
+  font-size:16px;
+}
+
+.dday-date{
+  color:#3563e9;
+  font-weight:bold;
+}
+
+.dday-box h2{
+  color:#222;
+  font-size:20px;
+  margin-top:0;
+}
+
+.today{
+  background:#dce9ff !important;
+  border:2px solid #3563e9 !important;
+}

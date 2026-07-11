@@ -1,0 +1,150 @@
+HTML
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUGO-ON 수행평가 캘린더</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+    <header>
+      <section class="dday-box">
+  <h2>🔥 다가오는 수행평가</h2>
+  <div id="ddayList"></div>
+</section>
+      <h1>BUGO-ON 수행평가 캘린더</h1>
+      <button id="loginBtn">관리자 로그인</button>
+      <button id="logoutBtn" class="hidden">로그아웃</button>
+    </header>
+
+<section class="timetable-box">
+  <h2>📚 시간표</h2>
+
+  <table id="timetable">
+    <thead>
+      <tr>
+        <th></th>
+        <th>월</th>
+        <th>화</th>
+        <th>수</th>
+        <th>목</th>
+        <th>금</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td></td><td></td><td></td><td></td><td></td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td></td><td></td><td></td><td></td><td></td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td></td><td></td><td></td><td></td><td></td>
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td></td><td></td><td></td><td></td><td></td>
+      </tr>
+
+      <tr>
+        <td>5</td>
+        <td></td><td></td><td></td><td></td><td></td>
+      </tr>
+
+      <tr>
+        <td>6</td>
+        <td></td><td></td><td></td><td></td><td></td>
+      </tr>
+
+      <tr>
+        <td>7</td>
+        <td></td><td></td><td></td><td></td><td></td>
+      </tr>
+    </tbody>
+  </table>
+
+</section>
+
+<section class="meal-box">
+  <h2>🍚 오늘의 급식</h2>
+  <div id="meal">
+    급식 정보를 불러오는 중...
+  </div>
+</section>
+    
+    <section class="calendar-box">
+      <div class="calendar-header">
+        <button id="prevMonth">◀</button>
+        <h2 id="monthTitle">2026년 7월</h2>
+        <button id="nextMonth">▶</button>
+      </div>
+
+      <div class="weekdays">
+        <div>일</div>
+        <div>월</div>
+        <div>화</div>
+        <div>수</div>
+        <div>목</div>
+        <div>금</div>
+        <div>토</div>
+      </div>
+
+      <div id="calendar" class="calendar"></div>
+    </section>
+
+    <section id="adminPanel" class="admin-panel hidden">
+      <h2>수행 일정 등록</h2>
+
+      <input id="titleInput" placeholder="제목 예: 수학 수행평가">
+      <input id="subjectInput" placeholder="과목 예: 수학">
+      <input id="dateInput" type="date">
+      <textarea id="contentInput" placeholder="내용 예: 명제 발표 준비"></textarea>
+
+      <button id="addScheduleBtn">일정 추가</button>
+    </section>
+
+    <section class="list-box">
+      <h2>전체 수행 일정</h2>
+      <div id="scheduleList"></div>
+    </section>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<div id="popup" class="popup hidden">
+  <div class="popup-box">
+
+    <h2 id="popupTitle"></h2>
+
+    <p><strong>과목 :</strong>
+      <span id="popupSubject"></span>
+    </p>
+
+    <p><strong>날짜 :</strong>
+      <span id="popupDate"></span>
+    </p>
+
+    <p><strong>내용 :</strong></p>
+
+    <p id="popupContent"></p>
+
+    <button id="closePopup">닫기</button>
+
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
