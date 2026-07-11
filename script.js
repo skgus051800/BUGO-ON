@@ -1,5 +1,5 @@
 JAVA
-
+alert("JS 시작");
 const firebaseConfig = {
   apiKey: "AIzaSyBcjSuTkJ9Y0CJ0ENS7gaTWmHJTs6BhVtw",
   authDomain: "bugo-on-433d8.firebaseapp.com",
