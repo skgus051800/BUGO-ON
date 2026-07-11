@@ -518,3 +518,5 @@ meals.forEach(item => {
 }
 
 loadMeal();
+
+console.log("JS 끝까지 실행됨");
