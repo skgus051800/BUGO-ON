@@ -74,16 +74,6 @@ function renderCalendar() {
     const dayBox = document.createElement("div");
 dayBox.className = "day";
 
-const today = new Date();
-
-if(
-  year === today.getFullYear() &&
-  month === today.getMonth() &&
-  day === today.getDate()
-){
-  dayBox.classList.add("today");
-}
-
     const dayNumber = document.createElement("div");
     dayNumber.className = "day-number";
     dayNumber.textContent = day;
