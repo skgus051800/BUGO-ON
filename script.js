@@ -441,6 +441,7 @@ nextMonthBtn.onclick = () => {
   renderCalendar();
 };
 
+renderCalendar();
 loadSchedules();
 loadTimetable();
 
