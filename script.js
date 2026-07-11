@@ -45,6 +45,12 @@ let timetableData = {
   fri: ["", "", "", "", "", "", ""]
 };
 
+function renderCalendar() {
+
+  alert("달력 실행");
+
+  calendar.innerHTML = "";
+
 function formatDate(year, month, day) {
   const m = String(month + 1).padStart(2, "0");
   const d = String(day).padStart(2, "0");
